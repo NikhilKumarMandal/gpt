@@ -22,6 +22,11 @@ export const polarClient = new Polar({
 
 export const auth = betterAuth({
   baseURL: process.env.BETTER_AUTH_URL,
+   basePath: "/api/auth",
+    trustedOrigins: [
+    "http://localhost:3000",
+    "https://gpt-seven-mu.vercel.app"
+  ],
   database: drizzleAdapter(db, {
     provider: "pg",
     schema: schema,
