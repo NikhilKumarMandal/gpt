@@ -25,7 +25,8 @@ export const auth = betterAuth({
    basePath: "/api/auth",
     trustedOrigins: [
     "http://localhost:3000",
-    "https://gpt-seven-mu.vercel.app"
+    "https://gpt-seven-mu.vercel.app",
+    "https://gpt.nikhilkumar007.com"
   ],
   database: drizzleAdapter(db, {
     provider: "pg",
